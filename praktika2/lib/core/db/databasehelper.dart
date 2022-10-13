@@ -3,6 +3,7 @@ import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:path/path.dart';
 import 'package:praktika2/common/databaserequest.dart';
 import 'package:praktika2/data/model/role.dart';
+import 'package:praktika2/data/model/typeFurniture.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite/sqlite_api.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -30,6 +31,8 @@ class DataBaseHelper {
              onCreate: (db, version) {onCreateTable(db);},
              onUpgrade: ((db, oldVersion, newVersion) async {await onUpdateTable(db);})
           ));
+
+
     } else {
       database =
           await openDatabase(_pathDB, version: 1, onCreate: (db, version) {
@@ -67,6 +70,9 @@ class DataBaseHelper {
     try {
       db.insert(DataBaseRequest.tableRole, Role(role: 'Администратор').toMap());
       db.insert(DataBaseRequest.tableRole, Role(role: 'Пользователя').toMap());
+      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(name: 'Стол').toMap());
+      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(name: 'Стул').toMap());
+      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(name: 'Диван').toMap());
     } on DatabaseException catch (e) {
       print(e.getResultCode());
     }
