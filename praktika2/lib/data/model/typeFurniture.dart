@@ -5,7 +5,7 @@ class TypeFurniture extends TypeFurnitureEntity
 late int id;
 final String name;
 
-  TypeFurniture({required this.name}) :super(name : name);
+  TypeFurniture({required this.id,required this.name}) :super(id:id,name : name);
   
   Map<String, dynamic> toMap(){
     return {'name':name};
@@ -13,6 +13,6 @@ final String name;
 
   factory TypeFurniture.toFromMap(Map<String, dynamic> json)
   {
-    return TypeFurniture(name: json ['name']);
+    return TypeFurniture(id: json ['id'],name: json ['name']);
   }
 }

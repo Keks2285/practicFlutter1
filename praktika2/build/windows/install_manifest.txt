@@ -1,0 +1,9 @@
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/icudtl.dat
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/flutter_windows.dll
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/Oleg/Documents/GitHub/practicFlutter1/praktika2/build/windows/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

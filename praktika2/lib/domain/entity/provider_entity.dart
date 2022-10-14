@@ -4,5 +4,5 @@ class ProviderEntity{
   final String name;
   final String number;
 
-  ProviderEntity({required this.adres, required this.name, required this.number});
+  ProviderEntity({required this.id,required this.adres, required this.name, required this.number});
 }

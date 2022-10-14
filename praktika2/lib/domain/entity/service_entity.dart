@@ -3,7 +3,7 @@ class ServiceEntity{
   final String name;
   final double price;
 
-  ServiceEntity({required this.name, required this.price});
+  ServiceEntity({required this.id,required this.name, required this.price});
 
 //CRUD methods
 

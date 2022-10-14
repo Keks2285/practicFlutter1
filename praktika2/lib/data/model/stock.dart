@@ -6,7 +6,7 @@ class Stock extends StockEntity
 late int id;
 final String adres;
 
-  Stock({required this.adres}) :super(adres : adres);
+  Stock({required this.id,required this.adres}) :super(id:id,adres : adres);
   
   Map<String, dynamic> toMap(){
     return {'adres':adres};
@@ -14,6 +14,6 @@ final String adres;
 
   factory Stock.toFromMap(Map<String, dynamic> json)
   {
-    return Stock(adres: json ['adres']);
+    return Stock(id: json ['id'],adres: json ['adres']);
   }
 }

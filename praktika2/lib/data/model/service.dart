@@ -7,7 +7,7 @@ late int id;
 final String name;
 final double price;
 
-  Service({required this.name, required this.price}) :super(name : name, price:price);
+  Service({required this.id,required this.name, required this.price}) :super(id:id,name : name, price:price);
 
   Map<String, dynamic> toMap(){
     return {'name':name, 'price':price};
@@ -15,6 +15,6 @@ final double price;
 
   factory Service.toFromMap(Map<String, dynamic> json)
   {
-    return Service(name: json ['name'], price: json ['price']);
+    return Service(id: json ['id'],name: json ['name'], price: json ['price']);
   }
 }

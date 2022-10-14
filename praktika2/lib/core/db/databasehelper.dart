@@ -68,11 +68,11 @@ class DataBaseHelper {
 
   Future<void> onInitTable(Database db) async {
     try {
-      db.insert(DataBaseRequest.tableRole, Role(role: 'Администратор').toMap());
-      db.insert(DataBaseRequest.tableRole, Role(role: 'Пользователя').toMap());
-      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(name: 'Стол').toMap());
-      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(name: 'Стул').toMap());
-      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(name: 'Диван').toMap());
+      db.insert(DataBaseRequest.tableRole, Role(id:1,role: 'Администратор').toMap());
+      db.insert(DataBaseRequest.tableRole, Role(id:2,role: 'Пользователя').toMap());
+      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(id:1,name: 'Стол').toMap());
+      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(id:2,name: 'Стул').toMap());
+      db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(id:3,name: 'Диван').toMap());
     } on DatabaseException catch (e) {
       print(e.getResultCode());
     }

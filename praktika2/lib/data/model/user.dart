@@ -10,6 +10,7 @@ final String password;
 final int id_role;
 
   User({
+    required this.id,
     required this.login,
     required this.firstName,
     required this.lastName,
@@ -17,6 +18,7 @@ final int id_role;
     required this.password,
     required this.id_role
     }) :super(
+      id:id,
       login : login, 
       firstName:firstName,
       lastName:lastName,
@@ -39,6 +41,7 @@ final int id_role;
   factory User.toFromMap(Map<String, dynamic> json)
   {
     return User(
+      id: json ['id'],
       login: json ['role'],
       firstName:json ['firstName'],
       lastName:json ['lastName'],

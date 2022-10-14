@@ -7,7 +7,7 @@ class Provider extends ProviderEntity{
   final String name;
   final String number;
 
-  Provider({required this.adres, required this.name, required this.number}) :super(adres : adres, name:name, number:number);
+  Provider({required this.id,required this.adres, required this.name, required this.number}) :super(id:id,adres : adres, name:name, number:number);
 
   Map<String, dynamic> toMap(){
     return {'adres':adres, 'name':name, 'number':number};
@@ -15,6 +15,6 @@ class Provider extends ProviderEntity{
 
   factory Provider.toFromMap(Map<String, dynamic> json)
   {
-    return Provider(adres: json ['adres'], name: json ['name'], number: json ['number'] );
+    return Provider(id: json ['id'],adres: json ['adres'], name: json ['name'], number: json ['number'] );
   }
 }

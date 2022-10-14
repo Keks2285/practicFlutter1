@@ -6,7 +6,7 @@ late int id;
   final String adres;
   final int id_stock;
 
-  Market({required this.adres, required this.id_stock}) :super(adres : adres, id_stock:id_stock);
+  Market({required this.id,required this.adres, required this.id_stock}) :super(id:id, adres : adres, id_stock:id_stock);
 
   Map<String, dynamic> toMap(){
     return {'adres':adres, 'id_stock':id_stock};
@@ -14,6 +14,6 @@ late int id;
 
   factory Market.toFromMap(Map<String, dynamic> json)
   {
-    return Market(adres: json ['adres'], id_stock: json ['id_stock']);
+    return Market(id: json ['id'],adres: json ['adres'], id_stock: json ['id_stock']);
   }
 }

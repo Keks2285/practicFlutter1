@@ -2,7 +2,7 @@ class TypeFurnitureEntity{
   late int id;
   final String name;
 
-  TypeFurnitureEntity({required this.name});
+  TypeFurnitureEntity({required this.id,required this.name});
 
 //CRUD methods
 }

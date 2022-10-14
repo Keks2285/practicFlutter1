@@ -8,6 +8,7 @@ class UserEntity{
   final int id_role;
   
   UserEntity({
+    required this.id,
     required this.login,
     required this.firstName,
     required this.lastName,

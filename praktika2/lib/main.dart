@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:praktika2/core/db/databasehelper.dart';
 
-void main() {
+
+void main() async{
+  await DataBaseHelper.instance.init();
   runApp(const App());
 }
 
