@@ -1,10 +1,12 @@
+import 'package:praktika2/domain/entity/role_entity.dart';
+
 class UserEntity{
   late int id;
   final String login;
   final String firstName;
   final String lastName;
   final String middleName;
-    final String password;
+  final String password;
   final int id_role;
   
   UserEntity({

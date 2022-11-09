@@ -4,4 +4,17 @@ class RoleEntity{
 
   RoleEntity({required this.id,required this.role});
 }
-enum RoleEnum {admin, user}
+enum RoleEnum {
+  admin(id:1, role: 'Адмиистратор'),
+  user(id:2, role: 'Пользователь');
+
+  const RoleEnum({
+    required this.role,
+    required this.id
+  });
+
+  final String role;
+  final int id;
+
+
+}

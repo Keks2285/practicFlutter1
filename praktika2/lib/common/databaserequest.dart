@@ -45,7 +45,7 @@ abstract class DataBaseRequest{
   /// Запрос для создания таблицы Users
 
   static const String _createTableUsers =
-  'CREATE TABLE "$tableUsers" ("id" INTEGER   KEY,"login" TEXT NOT NULL UNIQUE,"password" TEXT NOT NULL, "first_name" TEXT NOT NULL, "last_name" TEXT NOT NULL, "middle_name" TEXT ,"id_role" INTEGER,FOREIGN KEY("id_role") REFERENCES "$tableProvider"("id"),PRIMARY KEY("id"));';
+  'CREATE TABLE "$tableUsers" ("id" INTEGER,"login" TEXT NOT NULL UNIQUE,"password" TEXT NOT NULL, "firstname" TEXT NOT NULL, "lastname" TEXT NOT NULL, "middlename" TEXT ,"id_role" INTEGER,FOREIGN KEY("id_role") REFERENCES "$tableProvider"("id"),  PRIMARY KEY("id" AUTOINCREMENT));';
 
   static const String _createTableProvider=
   'CREATE TABLE "$tableProvider"( "id" INTEGER , "name" TEXT NOT NULL UNIQUE, "adres" TEXT NOT NULL, "email" TEXT NOT NULL UNIQUE, PRIMARY KEY("id" AUTOINCREMENT));';
@@ -63,7 +63,7 @@ abstract class DataBaseRequest{
    'CREATE TABLE "$tableAccessory" ("id" INTEGER,"name" TEXT NOT NULL UNIQUE, "price" REAL NOT NULL, "id_furniture" INTEGER, "id_stock" INTEGER,PRIMARY KEY("id" AUTOINCREMENT), FOREIGN KEY("id_furniture") REFERENCES "$tableFurniture"("id"), FOREIGN KEY("id_stock") REFERENCES "$tableStock"("id"));';
 
 static const String _createTableTypeFurniture =
-   'CREATE TABLE "$tableTypeFurniture" ("id" INTEGER,"name" TEXT NOT NULL UNIQUE,PRIMARY KEY("id" AUTOINCREMENT));';
+   'CREATE TABLE "$tableTypeFurniture" ("id" INTEGER ,"name" TEXT NOT NULL UNIQUE,PRIMARY KEY("id" AUTOINCREMENT));';
 
 static const String _createTabletableMarket =
    'CREATE TABLE "$tableMarket" ("id" INTEGER,"adres" TEXT NOT NULL UNIQUE, "id_stock" INTEGER, FOREIGN KEY("id_stock") REFERENCES "$tableStock"("id"),PRIMARY KEY("id" AUTOINCREMENT));';

@@ -1,3 +1,4 @@
+import 'package:praktika2/domain/entity/role_entity.dart';
 import 'package:praktika2/domain/entity/user_entity.dart';
 
 class User extends UserEntity{
@@ -10,7 +11,7 @@ final String password;
 final int id_role;
 
   User({
-    required this.id,
+     this.id=0,
     required this.login,
     required this.firstName,
     required this.lastName,
@@ -47,7 +48,7 @@ final int id_role;
       lastName:json ['lastName'],
       middleName:json ['middleName'],
       password:json ['password'],
-      id_role:json ['id_role'],
+      id_role:json['id_role']
       );
   }
 }

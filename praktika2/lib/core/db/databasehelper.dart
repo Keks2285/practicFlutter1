@@ -14,7 +14,6 @@ class DataBaseHelper {
   DataBaseHelper._instance();
 
   late final Directory _appDocumentDirectory;
-
   late final String _pathDB;
   late final Database database;
   Future<void> init() async {
@@ -27,7 +26,7 @@ class DataBaseHelper {
       var databaseFactory = databaseFactoryFfi;
       database= await databaseFactory.openDatabase(_pathDB,   
         options: OpenDatabaseOptions(
-             version: 1,
+             version: 4,
              onCreate: (db, version) {onCreateTable(db);},
              onUpgrade: ((db, oldVersion, newVersion) async {await onUpdateTable(db);})
           ));
@@ -69,7 +68,7 @@ class DataBaseHelper {
   Future<void> onInitTable(Database db) async {
     try {
       db.insert(DataBaseRequest.tableRole, Role(id:1,role: 'Администратор').toMap());
-      db.insert(DataBaseRequest.tableRole, Role(id:2,role: 'Пользователя').toMap());
+      db.insert(DataBaseRequest.tableRole, Role(id:2,role: 'Пользователь').toMap());
       db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(id:1,name: 'Стол').toMap());
       db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(id:2,name: 'Стул').toMap());
       db.insert(DataBaseRequest.tableTypeFurniture, TypeFurniture(id:3,name: 'Диван').toMap());
